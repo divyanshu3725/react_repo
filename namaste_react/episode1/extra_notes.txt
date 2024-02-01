@@ -1,0 +1,41 @@
+WHAT PROBLEMS DOES REACT SOLVE THAT JAVASCRIPT COULDN'T?
+- manipulating the DOM directly can be inefficient, leading to slow rendering and updates
+- React use virtual DOM for solving this problem
+- building reusable UIs using plain javascript is cumbersome and may require duplicating code
+- Using React we can build reusable UI components easily
+- traditional JavaScript applications are hard to maintain and scale
+- React promotes code reusability and maintainability
+- Embedding HTML markups in JavaScript strings is hard
+- React supports JSX 😎
+
+HOW DOES OUR REACT PROJECT WORK IF BROWSERS DON'T UNDERSTAND REACT CODE
+- react code and ES6 code is converted (or transpiled) into plain JavaScript using tools like Babel
+- then browsers read this JavaScript and our projects work
+
+WHY ARE DOM MANIPULATIONS COSTLY
+- because it triggers reflow and repaint processes
+- and these dom manipulations become even more costly in case of mobile devices
+- how?
+  - mobile devices have limited processing power, 
+  - so doing DOM manipulations slows down the performance and leads to increased battery consumption
+
+SO WHAT'S THE SOLUTION
+- using virtual DOM
+- using eventt delegation
+
+BEHIND THE SCENES OF RENDERING
+- first we create a react element
+- then we render it using the root.render method
+- on rendering:
+  - first a new virtual DOM is created
+  - then it's compared with the old virtual DOM
+  - then diffing is done, which involves calculating minimum number of changes that need to be made so as to achieve the new virtual DOM
+  - then the DOM is updated actually
+- and this process if more efficient than re-rendering the whole UI
+
+REFLOW
+- involves recalculating the layout of the entire page
+
+REPAINT
+- involves redrawing the elements on the screen
+
