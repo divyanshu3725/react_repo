@@ -140,7 +140,7 @@ console.log(newElement);
 
 // REACT IS A LIBRARY
 // - we can use it in a part of our project
-// - so react is light
+// - so react is lightd
 
 // HOMEWORK
 // WHAT IS CDN?
