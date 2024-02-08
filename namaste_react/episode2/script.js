@@ -49,6 +49,8 @@ import ReactDOM  from "react-dom/client";
 // npx command is used for executing a package
 // parcel has build a developmet build and hosted it on a local server
 
+// till here 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
+
 // DEPENDENCIES
 // dev dependencies are used in development phase
 // normal dependencies are used in the production phase

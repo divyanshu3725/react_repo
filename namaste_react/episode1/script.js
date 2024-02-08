@@ -116,7 +116,10 @@ const newElement = React.createElement(
 );
 const rootElement = ReactDOM.createRoot(document.getElementById('root'));
 rootElement.render(newElement);
-console.log(newElement);
+// console.log(React);
+// console.log(ReactDOM);
+// console.log(newElement);
+// console.log(rootElement);
 
 // BUT USING REACT.CRATEELEMENT AND REACTDOM.CREATEROOT AND RENDER
 // - are making code ugly

@@ -1,51 +1,8 @@
-WHAT IS EMMET?
-- they are set of abbreviations and shortcuts that allows developers to write HTML and CSS code quickly.
-- these abbreviations and shortcuts can be expanded into HTML or CSS code
-- they come integrated with IDEs
-- in HTML we use emmets for:
-  a. definig relationships between elements while building sturcture (ul>li)
-  b. creating nested element structure (div>ul>li*3)
-  c. creating multiple similar elements at once (li*3) 
-- in CSS we use emmets as shorthands for:
-  a. properties (m10)
-  b. goupings (p, div, h1)
-
-DIFFERENTIATE BETWEEN LIBRARY AND A FRAMEWORK
-- flexibility
-  - libraries offer flexibility by allowing developers to choose how to structure their code and when to invoke library functions
-  - frameoworks are less flexible as developers need to adhere to the framework's architecture and conventions
-- control
-  - in libraries the developers control the flow of application
-  - in frameoworks the frameowork controls the flow of application
-- functions
-  - libraries provide functions that developers use for faster development
-  - frameoworks provided a pre-established structure for development, a comprehensive and integrated set of tools, 
-- examples
-  - libraries: jQuery, lodash, unserscore, react, d3, three, chart, moment, axios, anime
-  - frameoworks: angular, vue, ember, backbone, svelte, express, meteor, nest, adonis
-
-CDN
-- A Content Delivery Network is a network of distributed servers strategically located across the globe to deliver web content
-- CDN links refer to the URLs of assets that are served through a Content Delivery Network.
-  
-ADVANTAGES OF USING CDN LINKS
-- faster load times (web content are cached on multiple servers globally, when a user requests a particular resource, it's fetched from the nearest server)
-- ensures global accessiblity of web content (as servers are located at different locations accross the globe) 
-- offeer ease of scalability (as load is distributed across multiple servers)
-- result in cost savings (by reducing bandwidth usage) (bandwidth usage is reduces due to optimized delivery of content)
-
-REACT v/s REACTDOM
-- they are two separate packages in the React ecosystem
-- react package is the core library for building User Interfaces
-- react dom package is the library which is used for rendering react components or react elements into DOM
-
-REACT.DEVELOPMENT.JS v/s REACT.PRODUCTION.JS
-- react.development.js is used in the development environment
-- react.production.js is used in the production environment
-- it includes additional warnings and informative error messages
-- it omits development-specific features, warnings, debugging tools, to reduce file size and improve runtime performance
-- development version builts are larger in size due to inclusion of additional development tools 
-- production version builts are smaller in size because smaller size files are more suitable for production deployments (where file size and load times are criticla)
-
-ASYNC v/s DEFER
-CROSSORIGIN
+WHAT IS EMMET? ✅
+DIFFERENTIATE BETWEEN LIBRARY AND A FRAMEWORK ✅
+CDN ✅
+ADVANTAGES OF USING CDN LINKS ✅
+REACT v/s REACTDOM ✅
+REACT.DEVELOPMENT.JS v/s REACT.PRODUCTION.JS ✅
+ASYNC v/s DEFER 🟥
+CROSSORIGIN 🟥

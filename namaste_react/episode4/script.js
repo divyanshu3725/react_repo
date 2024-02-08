@@ -23,6 +23,1855 @@ import ReactDOM from "react-dom/client";
 // - legal
 // - we deliver to
 
+// RESTAURENT ARRAY 1
+let restaurantsArray1 = [
+    {
+        "info": {
+            "id": "93855",
+            "name": "Pizza Hut",
+            "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            "locality": "Rama Magneto Mall",
+            "areaName": "Tifra",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+                "Pizzas"
+            ],
+            "avgRating": 4.2,
+            "parentId": "721",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 1.6,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.6 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "50% OFF",
+                "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/pizza-hut-rama-magneto-mall-tifra-bilaspur-93855",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "505259",
+            "name": "McDonald's",
+            "cloudinaryImageId": "03501c33ecb3a3105124441e541e6fe4",
+            "locality": "Rama Magneto Mall",
+            "areaName": "Talapara",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "parentId": "630",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 1.6,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.6 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:45:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹199"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-rama-magneto-mall-talapara-bilaspur-505259",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "95885",
+            "name": "Nitya's Zaika",
+            "cloudinaryImageId": "wi2eyijrcsfpddtgri58",
+            "locality": "Tilak Nagar",
+            "areaName": "Aayan Chamber",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+                "Biryani",
+                "Snacks",
+                "Chinese"
+            ],
+            "avgRating": 4,
+            "parentId": "149496",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 1.9,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.9 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:45:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "₹100 OFF",
+                "subHeader": "ABOVE ₹249",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/nityas-zaika-tilak-nagar-aayan-chamber-bilaspur-95885",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "482859",
+            "name": "Neelkanth Restaurant",
+            "cloudinaryImageId": "lactd4t1une90rdldo5n",
+            "locality": "Pratap Talkies Chowk",
+            "areaName": "Gole Bazaar",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+                "Indian",
+                "South Indian",
+                "North Indian",
+                "Chinese"
+            ],
+            "avgRating": 4,
+            "veg": true,
+            "parentId": "145363",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 1.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "50% OFF",
+                "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/neelkanth-restaurant-pratap-talkies-chowk-gole-bazaar-bilaspur-482859",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "118869",
+            "name": "KFC",
+            "cloudinaryImageId": "f01666ac73626461d7455d9c24005cd4",
+            "locality": "Shrikant Verma Marg",
+            "areaName": "Tifra",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            "avgRating": 4.2,
+            "parentId": "547",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 21,
+                "lastMileTravel": 1.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹179"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/kfc-shrikant-verma-marg-tifra-bilaspur-118869",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "92957",
+            "name": "Madrasi Treat",
+            "cloudinaryImageId": "eqgp4aegdkwn1lsbfhxc",
+            "locality": "Agrasen Chowk",
+            "areaName": "Tikrapara",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Biryani",
+                "Tandoor",
+                "North Indian",
+                "Chinese",
+                "Seafood",
+                "Mughlai"
+            ],
+            "avgRating": 4.2,
+            "parentId": "230840",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "5K+",
+            "sla": {
+                "deliveryTime": 16,
+                "lastMileTravel": 1.2,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.2 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:15:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/madrasi-treat-agrasen-chowk-tikrapara-bilaspur-92957",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470500",
+            "name": "Oven Story Pizza - Standout Toppings",
+            "cloudinaryImageId": "b39e4312ae2e9f65c3b58faaed83f488",
+            "locality": "A Block",
+            "areaName": "Masanganj",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Pizzas",
+                "Pastas",
+                "Italian",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.4,
+            "parentId": "3534",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 24,
+                "lastMileTravel": 1.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "60% OFF",
+                "subHeader": "UPTO ₹110"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/oven-story-pizza-standout-toppings-a-block-masanganj-bilaspur-470500",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "420419",
+            "name": "Balle Balle The Family Dhaba",
+            "cloudinaryImageId": "viv7db7gidcxukzzofur",
+            "locality": "Shiv Talkies Road",
+            "areaName": "Shiv Talkies Chowk",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+                "Chinese",
+                "Tandoor"
+            ],
+            "avgRating": 4.1,
+            "parentId": "234041",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 2.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "₹100 OFF",
+                "subHeader": "ABOVE ₹249",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/balle-balle-the-family-dhaba-shiv-talkies-road-shiv-talkies-chowk-bilaspur-420419",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "92936",
+            "name": "Cafe Yuva",
+            "cloudinaryImageId": "flkrqw93czpwolppunn4",
+            "locality": "Sindhi Colony",
+            "areaName": "Narmada Nagar",
+            "costForTwo": "₹179 for two",
+            "cuisines": [
+                "Chinese",
+                "Pastas",
+                "Beverages"
+            ],
+            "avgRating": 4.1,
+            "veg": true,
+            "parentId": "54503",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 26,
+                "lastMileTravel": 1.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "25-30 mins",
+                "lastMileTravelString": "1.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 01:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "₹150 OFF",
+                "subHeader": "ABOVE ₹349",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/cafe-yuva-sindhi-colony-narmada-nagar-bilaspur-92936",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "109510",
+            "name": "Sanjha Chulha",
+            "cloudinaryImageId": "u5nipdo2njvu4paifgac",
+            "locality": "Bhartiya Nagar",
+            "areaName": "Agyay Nagar",
+            "costForTwo": "₹200 for two",
+            "cuisines": [
+                "Chinese",
+                "Thalis"
+            ],
+            "avgRating": 4,
+            "parentId": "1356",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "5K+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 1.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:30:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "₹125 OFF",
+                "subHeader": "ABOVE ₹199",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/sanjha-chulha-bhartiya-nagar-agyay-nagar-bilaspur-109510",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "92941",
+            "name": "Madrasi Restaurant",
+            "cloudinaryImageId": "btq5y0fxh5nkgod86bd6",
+            "locality": "Old High Court Road",
+            "areaName": "Tikrapara",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Biryani",
+                "Tandoor",
+                "North Indian",
+                "Mughlai",
+                "Seafood"
+            ],
+            "avgRating": 4.2,
+            "parentId": "128964",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "5K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "3.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:30:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/madrasi-restaurant-old-high-court-road-tikrapara-bilaspur-92941",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "724177",
+            "name": "Burger Singh (Big Punjabi Burgers)",
+            "cloudinaryImageId": "972a37599772cdc7df93a0855ad87591",
+            "locality": "Bilaspur",
+            "areaName": "Telipara",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+                "Burgers",
+                "Snacks",
+                "Desserts",
+                "Beverages",
+                "Fast Food",
+                "American",
+                "Indian",
+                "Biryani"
+            ],
+            "avgRating": 4.3,
+            "parentId": "375065",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 1.6,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.6 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 02:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "50% OFF",
+                "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/burger-singh-big-punjabi-burgers-telipara-bilaspur-724177",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470498",
+            "name": "Faasos - Wraps, Rolls & Shawarma",
+            "cloudinaryImageId": "af33b81798b11deba338e94b7585d348",
+            "locality": "Rao Trade Center",
+            "areaName": "Masanganj",
+            "costForTwo": "₹200 for two",
+            "cuisines": [
+                "Kebabs",
+                "Fast Food",
+                "Snacks",
+                "American",
+                "Healthy Food",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.5,
+            "parentId": "21809",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 1.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹129"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/faasos-wraps-rolls-and-shawarma-rao-trade-center-masanganj-bilaspur-470498",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470506",
+            "name": "The Biryani Life",
+            "cloudinaryImageId": "kcemrov7wreoclpsof1g",
+            "locality": "Rao Trade Center",
+            "areaName": "Masanganj",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+                "Biryani",
+                "Mughlai",
+                "Lucknowi",
+                "Hyderabadi",
+                "Kebabs",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.3,
+            "parentId": "8496",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "500+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 1.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "60% OFF",
+                "subHeader": "UPTO ₹110"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-biryani-life-rao-trade-center-masanganj-bilaspur-470506",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "629415",
+            "name": "Dum Safar Biryani",
+            "cloudinaryImageId": "ggexforny5jlhaifbh8l",
+            "locality": "Masanganj",
+            "areaName": "Ambedkar Nagar",
+            "costForTwo": "₹500 for two",
+            "cuisines": [
+                "Biryani",
+                "Kebabs",
+                "Tandoor",
+                "Indian",
+                "Desserts"
+            ],
+            "avgRating": 4.3,
+            "parentId": "351013",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 21,
+                "lastMileTravel": 1.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:30:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "50% OFF",
+                "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/dum-safar-biryani-masanganj-ambedkar-nagar-bilaspur-629415",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470504",
+            "name": "LunchBox - Meals and Thalis",
+            "cloudinaryImageId": "b1kdyrzn77d4tnanmcaa",
+            "locality": "Rao Trade Center",
+            "areaName": "Masanganj",
+            "costForTwo": "₹200 for two",
+            "cuisines": [
+                "Biryani",
+                "North Indian",
+                "Punjabi",
+                "Healthy Food",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.4,
+            "parentId": "4925",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "500+",
+            "sla": {
+                "deliveryTime": 23,
+                "lastMileTravel": 1.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹159"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/lunchbox-meals-and-thalis-rao-trade-center-masanganj-bilaspur-470504",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "95708",
+            "name": "Domino's Pizza",
+            "cloudinaryImageId": "apxatz033mo4jsex2qzs",
+            "locality": "Rama Magneto Mall",
+            "areaName": "Tifra",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+                "Pizzas",
+                "Italian",
+                "Pastas",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "parentId": "2456",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 30,
+                "serviceability": "SERVICEABLE",
+                "slaString": "30 mins",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "30% OFF",
+                "subHeader": "UPTO ₹75"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/dominos-pizza-rama-magneto-mall-tifra-bilaspur-95708",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "92921",
+            "name": "Baskin Robbins - Ice Cream Desserts",
+            "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+            "locality": "Rajendra Nagar Chowk",
+            "areaName": "Narmada Nagar",
+            "costForTwo": "₹150 for two",
+            "cuisines": [
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "5588",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "500+",
+            "sla": {
+                "deliveryTime": 19,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-09 00:00:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "30% OFF",
+                "subHeader": "UPTO ₹75"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-rajendra-nagar-chowk-narmada-nagar-bilaspur-92921",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470503",
+            "name": "Sweet Truth",
+            "cloudinaryImageId": "78408969d316991befba0a6eca303e1c",
+            "locality": "Rao Trade Center",
+            "areaName": "Masanganj",
+            "costForTwo": "₹450 for two",
+            "cuisines": [
+                "Snacks",
+                "Bakery",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.5,
+            "parentId": "4444",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 17,
+                "lastMileTravel": 1.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "60% OFF",
+                "subHeader": "UPTO ₹110"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/sweet-truth-rao-trade-center-masanganj-bilaspur-470503",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "470499",
+            "name": "Behrouz Biryani",
+            "cloudinaryImageId": "89fccaa76f2f760e2742b9e53d32bb69",
+            "locality": "Rao Trade Center",
+            "areaName": "Masanganj",
+            "costForTwo": "₹500 for two",
+            "cuisines": [
+                "Biryani",
+                "North Indian",
+                "Kebabs",
+                "Mughlai",
+                "Beverages",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "parentId": "1803",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 1.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-02-08 23:59:00",
+                "opened": true
+            },
+            "badges": {
+
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+
+                    },
+                    "textBased": {
+
+                    },
+                    "textExtendedBadges": {
+
+                    }
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "50% OFF",
+                "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {
+
+                    },
+                    "video": {
+
+                    }
+                }
+            },
+            "reviewsSummary": {
+
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+
+            }
+        },
+        "analytics": {
+
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/behrouz-biryani-rao-trade-center-masanganj-bilaspur-470499",
+            "type": "WEBLINK"
+        }
+    }
+];
+
+// USER OBJECT
+const user = {
+    firstNaam: "Divyanshu",
+    city: "Bilaspur",
+    state: "Chhattisgarh",
+    pincode: 495001,
+    country: "India",
+};
+
+// NAMEACCESSOR FUNCTION
+function fullName(obj) {
+    return `${obj.firstNaam}`
+};
+
+// ADDRESSACCESSOR FUNCTION
+function fullAddress(obj) {
+    return `${obj.city}, ${obj.state}, ${obj.pincode}, ${obj.country}`;
+};
+
+// SECTION1QUESTION COMPONENT
+const Section1Question = () => {
+    return (
+        <div className="section1Question text-[25px] font-bold border-2 border-solid border-white">
+            {fullName(user)}, what's on your mind?
+        </div>
+    )
+};
+
+const Section2Question = () => {
+    return (
+        <div className="section1Question text-[25px] font-bold border-2 border-solid border-white">
+            Top restaurant chains in {user.city}
+        </div>
+    )
+};
+
+// SECTION1NAVIGATION COMPONENT
+const Section1Navigation = () => {
+    return (
+        <div className="section1navigation w-[80px] flex justify-between border-2 mx-[40px] border-solid px-[10px] border-white">
+            <span className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+                <i className="fa-solid fa-arrow-left" style={{ position: 'relative', top: '5px' }}></i>
+            </span>
+            <span className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+                <i className="fa-solid fa-arrow-right" style={{ position: 'relative', top: '5px' }}></i>
+            </span>
+        </div>
+    )
+}
+
+// SECTION2NAVIGATION COMPONENT
+const Section2Navigation = () => {
+    return (
+        <div className="section1navigation w-[80px] flex justify-between border-2 mx-[40px] border-solid px-[10px] border-white">
+            <span className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+                <i className="fa-solid fa-arrow-left" style={{ position: 'relative', top: '5px' }}></i>
+            </span>
+            <span className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+                <i className="fa-solid fa-arrow-right" style={{ position: 'relative', top: '5px' }}></i>
+            </span>
+        </div>
+    )
+}
+
+// FOOD IMAGES
+const BiryaniImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png" width="144" height="180" alt="restaurants curated for biryani"></img>
+        </div>
+    )
+}
+const PizzaImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png" width="144" height="180" alt="restaurants curated for pizza"></img>
+        </div>
+    )
+}
+const NorthIndianImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png" width="144" height="180" alt="restaurants curated for north indian"></img>
+        </div>
+    )
+}
+const BurgerImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png" width="144" height="180" alt="restaurants curated for burger"></img>
+        </div>
+    )
+}
+const RollsImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        </div>
+    )
+}
+const CakesImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        </div>
+    )
+}
+const ParathaImage = () => {
+    return (
+        <div className="biryaniImage">
+            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Paratha.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        </div>
+    )
+}
+
+// TOP RESTAURANTS IN BILASPUR LIST
+const PizzaHut = () => {
+    return (
+        <div className="pizzaHut relative">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7" alt="Pizza Hut"></img>
+            <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">50% OFF UPTO ₹100 </div>
+            </div>
+            <div className="p-[14px]">
+            <div className="font-bold text-[18px]">Pizza Hut</div>
+            <div>
+                <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z" fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                <span className="mr-[5px] font-bold">4.2</span>
+                <span className="mr-[5px] font-bold">20-25mins</span>
+            </div>
+            <div>Pizzas</div>
+            <div>Tifra</div>
+            </div>
+        </div>
+    )
+};
+
+// SECTION1IMAGE BOX COMPONENT
+const Section1ImageBox = () => {
+    return (
+        <div className="section1ImageBox flex justify-between py-2 border-2 border-solid border-white">
+            <BiryaniImage />
+            <PizzaImage />
+            <NorthIndianImage />
+            <BurgerImage />
+            <RollsImage />
+            <CakesImage />
+            <ParathaImage />
+        </div>
+    )
+};
+
+// SECTION2IMAGE BOX COMPONENT
+const Section2ImageBox = () => {
+    return (
+        <div className="section1ImageBox flex justify-between py-2 border-2 border-solid border-white">
+            <PizzaHut />
+            {/* <McDonalds/> */}
+            {/* <NityasZaika/> */}
+            {/* <NeelKanthRestaurant/> */}
+            {/* <KFC/> */}
+            {/* <MadrasiTreat/> */}
+            {/* <OvenStory/> */}
+            {/* <BalleBalle/> */}
+            {/* <CafeYuva/> */}
+            {/* <SanjhaChulha/> */}
+            {/* <MadrasiRestaurant/> */}
+            {/* <BurgerSingh/> */}
+            {/* <Faasos/> */}
+            {/* <TheBiryaniLife/> */}
+            {/* <DumSafarBiryani/> */}
+            {/* <LunchBox/> */}
+            {/* <Dominos/> */}
+            {/* <BaskinRobbins/> */}
+            {/* <SweetTruth/> */}
+            {/* <BehrouzBiryani/> */}
+        </div>
+    )
+};
+
+// SECTION1HEAD COMPONENT
+const Section1Head = () => {
+    return (
+        <div className="section1head flex justify-between">
+            <Section1Question />
+            <Section1Navigation />
+        </div>
+    )
+}
+
+// SECTION2HEAD COMPONENT
+const Section2Head = () => {
+    return (
+        <div className="section1head flex justify-between">
+            <Section2Question />
+            <Section2Navigation />
+        </div>
+    )
+}
+
+// SECTION1 COMPONENT
+const Section1 = () => {
+    return (
+        <div className="section1 border-2 border-white border-solid mx-[200px] pb-[40px] mb-[40px]">
+            <Section1Head />
+            <Section1ImageBox />
+        </div>
+    )
+}
+
+// SECTION2 COMPONENT
+const Section2 = () => {
+    return (
+        <div className="section2 border-2 border-white border-solid mx-[200px]">
+            <Section2Head />
+            <Section2ImageBox />
+        </div>
+    )
+}
+
 const NavigationBar = () => {
     return (
         <div className="navbar border-2 border-white border-solid p-2 flex items-center justify-around w-[650px]">
@@ -35,15 +1884,15 @@ const NavigationBar = () => {
                 <span className="font-semibold">Offers</span>
             </div>
             <div className="help">
-            <svg className="mr-[10px] relative bottom-[2px] inline-block m-[2px]" viewBox="6 -1 12 25" height="19" width="19" fill="#686b78"><path d="M21.966903,13.2244898 C22.0156989,12.8231523 22.0408163,12.4145094 22.0408163,12 C22.0408163,11.8357822 22.036874,11.6724851 22.029079,11.5101984 L17.8574333,11.5102041 C17.8707569,11.6717062 17.877551,11.8350597 17.877551,12 C17.877551,12.4199029 17.8335181,12.8295214 17.749818,13.2244898 L21.966903,13.2244898 Z M21.5255943,15.1836735 L16.9414724,15.1836735 C15.8950289,16.8045422 14.0728218,17.877551 12,17.877551 C9.92717823,17.877551 8.1049711,16.8045422 7.05852762,15.1836735 L2.47440565,15.1836735 C3.80564362,19.168549 7.56739481,22.0408163 12,22.0408163 C16.4326052,22.0408163 20.1943564,19.168549 21.5255943,15.1836735 Z M21.7400381,9.55102041 C20.6468384,5.18931674 16.7006382,1.95918367 12,1.95918367 C7.2993618,1.95918367 3.3531616,5.18931674 2.25996187,9.55102041 L6.6553883,9.55102041 C7.58404845,7.5276442 9.62792376,6.12244898 12,6.12244898 C14.3720762,6.12244898 16.4159515,7.5276442 17.3446117,9.55102041 L21.7400381,9.55102041 Z M2.03309705,13.2244898 L6.25018203,13.2244898 C6.16648186,12.8295214 6.12244898,12.4199029 6.12244898,12 C6.12244898,11.8350597 6.1292431,11.6717062 6.14256675,11.5102041 L1.97092075,11.5102041 C1.96312595,11.6724851 1.95918367,11.8357822 1.95918367,12 C1.95918367,12.4145094 1.98430112,12.8231523 2.03309705,13.2244898 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,15.9183673 C14.1640545,15.9183673 15.9183673,14.1640545 15.9183673,12 C15.9183673,9.83594547 14.1640545,8.08163265 12,8.08163265 C9.83594547,8.08163265 8.08163265,9.83594547 8.08163265,12 C8.08163265,14.1640545 9.83594547,15.9183673 12,15.9183673 Z"></path></svg>
+                <svg className="mr-[10px] relative bottom-[2px] inline-block m-[2px]" viewBox="6 -1 12 25" height="19" width="19" fill="#686b78"><path d="M21.966903,13.2244898 C22.0156989,12.8231523 22.0408163,12.4145094 22.0408163,12 C22.0408163,11.8357822 22.036874,11.6724851 22.029079,11.5101984 L17.8574333,11.5102041 C17.8707569,11.6717062 17.877551,11.8350597 17.877551,12 C17.877551,12.4199029 17.8335181,12.8295214 17.749818,13.2244898 L21.966903,13.2244898 Z M21.5255943,15.1836735 L16.9414724,15.1836735 C15.8950289,16.8045422 14.0728218,17.877551 12,17.877551 C9.92717823,17.877551 8.1049711,16.8045422 7.05852762,15.1836735 L2.47440565,15.1836735 C3.80564362,19.168549 7.56739481,22.0408163 12,22.0408163 C16.4326052,22.0408163 20.1943564,19.168549 21.5255943,15.1836735 Z M21.7400381,9.55102041 C20.6468384,5.18931674 16.7006382,1.95918367 12,1.95918367 C7.2993618,1.95918367 3.3531616,5.18931674 2.25996187,9.55102041 L6.6553883,9.55102041 C7.58404845,7.5276442 9.62792376,6.12244898 12,6.12244898 C14.3720762,6.12244898 16.4159515,7.5276442 17.3446117,9.55102041 L21.7400381,9.55102041 Z M2.03309705,13.2244898 L6.25018203,13.2244898 C6.16648186,12.8295214 6.12244898,12.4199029 6.12244898,12 C6.12244898,11.8350597 6.1292431,11.6717062 6.14256675,11.5102041 L1.97092075,11.5102041 C1.96312595,11.6724851 1.95918367,11.8357822 1.95918367,12 C1.95918367,12.4145094 1.98430112,12.8231523 2.03309705,13.2244898 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,15.9183673 C14.1640545,15.9183673 15.9183673,14.1640545 15.9183673,12 C15.9183673,9.83594547 14.1640545,8.08163265 12,8.08163265 C9.83594547,8.08163265 8.08163265,9.83594547 8.08163265,12 C8.08163265,14.1640545 9.83594547,15.9183673 12,15.9183673 Z"></path></svg>
                 <span className="font-semibold">Help</span>
             </div>
-            <div className="victor">
-            <svg className="mr-[10px] relative bottom-[2px] inline-block m-[2px]" viewBox="6 0 12 24" height="19" width="18" fill="#686b78"><path d="M11.9923172,11.2463768 C8.81761115,11.2463768 6.24400341,8.72878961 6.24400341,5.62318841 C6.24400341,2.5175872 8.81761115,0 11.9923172,0 C15.1670232,0 17.740631,2.5175872 17.740631,5.62318841 C17.740631,8.72878961 15.1670232,11.2463768 11.9923172,11.2463768 Z M11.9923172,9.27536232 C14.0542397,9.27536232 15.7257581,7.64022836 15.7257581,5.62318841 C15.7257581,3.60614845 14.0542397,1.97101449 11.9923172,1.97101449 C9.93039471,1.97101449 8.25887628,3.60614845 8.25887628,5.62318841 C8.25887628,7.64022836 9.93039471,9.27536232 11.9923172,9.27536232 Z M24,24 L0,24 L1.21786143,19.7101449 L2.38352552,15.6939891 C2.85911209,14.0398226 4.59284263,12.7536232 6.3530098,12.7536232 L17.6316246,12.7536232 C19.3874139,12.7536232 21.1256928,14.0404157 21.6011089,15.6939891 L22.9903494,20.5259906 C23.0204168,20.63057 23.0450458,20.7352884 23.0641579,20.8398867 L24,24 Z M21.1127477,21.3339312 L21.0851024,21.2122487 C21.0772161,21.1630075 21.0658093,21.1120821 21.0507301,21.0596341 L19.6614896,16.2276325 C19.4305871,15.4245164 18.4851476,14.7246377 17.6316246,14.7246377 L6.3530098,14.7246377 C5.4959645,14.7246377 4.55444948,15.4231177 4.32314478,16.2276325 L2.75521062,21.6811594 L2.65068631,22.0289855 L21.3185825,22.0289855 L21.1127477,21.3339312 Z"></path></svg>
-                <span className="font-semibold">Victor</span>
+            <div className="userName">
+                <svg className="mr-[10px] relative bottom-[2px] inline-block m-[2px]" viewBox="6 0 12 24" height="19" width="18" fill="#686b78"><path d="M11.9923172,11.2463768 C8.81761115,11.2463768 6.24400341,8.72878961 6.24400341,5.62318841 C6.24400341,2.5175872 8.81761115,0 11.9923172,0 C15.1670232,0 17.740631,2.5175872 17.740631,5.62318841 C17.740631,8.72878961 15.1670232,11.2463768 11.9923172,11.2463768 Z M11.9923172,9.27536232 C14.0542397,9.27536232 15.7257581,7.64022836 15.7257581,5.62318841 C15.7257581,3.60614845 14.0542397,1.97101449 11.9923172,1.97101449 C9.93039471,1.97101449 8.25887628,3.60614845 8.25887628,5.62318841 C8.25887628,7.64022836 9.93039471,9.27536232 11.9923172,9.27536232 Z M24,24 L0,24 L1.21786143,19.7101449 L2.38352552,15.6939891 C2.85911209,14.0398226 4.59284263,12.7536232 6.3530098,12.7536232 L17.6316246,12.7536232 C19.3874139,12.7536232 21.1256928,14.0404157 21.6011089,15.6939891 L22.9903494,20.5259906 C23.0204168,20.63057 23.0450458,20.7352884 23.0641579,20.8398867 L24,24 Z M21.1127477,21.3339312 L21.0851024,21.2122487 C21.0772161,21.1630075 21.0658093,21.1120821 21.0507301,21.0596341 L19.6614896,16.2276325 C19.4305871,15.4245164 18.4851476,14.7246377 17.6316246,14.7246377 L6.3530098,14.7246377 C5.4959645,14.7246377 4.55444948,15.4231177 4.32314478,16.2276325 L2.75521062,21.6811594 L2.65068631,22.0289855 L21.3185825,22.0289855 L21.1127477,21.3339312 Z"></path></svg>
+                <span className="font-semibold">{fullName(user)}</span>
             </div>
             <div className="cart">
-            <svg className="mr-[10px] relative bottom-[2px] inline-block m-[2px]" viewBox="-1 0 37 32" height="20" width="20" fill="#686b78"><path d="M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"></path></svg>
+                <i class="fa-solid fa-basket-shopping fa-lg" style={{ color: '#808080', position: 'relative', right: '6px', bottom: '1px' }}></i>
                 <span className="font-semibold">Cart</span>
             </div>
         </div>
@@ -53,8 +1902,8 @@ const NavigationBar = () => {
 const Address = () => {
     return (
         <div className="address border-2 border-white border-solid text-[14px] p-2 w-[450px]">
-            <span className="other font-bold border-2 border-white decoration-2 underline-offset-4 decoration-solid underline decoration-black border-solid mx-[5px]">Other</span>
-            <span className="myAddress border-2 border-white border-solid mx-[5px]">Bilaspur, Chhattisgarh, 495001, India</span> <i id="downArrow" class="fa-solid fa-chevron-down"></i> 
+            <span className="other font-extrabold border-2 border-white decoration-2 underline-offset-4 decoration-solid underline decoration-black border-solid mx-[5px]">HOME</span>
+            <span className="myAddress border-2 border-white border-solid mx-[5px]">{fullAddress(user)}</span> <i id="downArrow" class="fa-solid fa-chevron-down"></i>
         </div>
     )
 }
@@ -69,10 +1918,26 @@ const Logo = () => {
     )
 }
 
+// BODY COMPONENT
+const Body = () => {
+    return (
+        <div className="body">
+            <Section1 />
+            <Section2 />
+            {/* <Section3/> */}
+        </div>
+    )
+};
+
+// HEADER SHADOW STYLE OBJECT
+const headerStyleObj = {
+    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+};
+
 // HEADER COMPONENT
 const Header = () => {
     return (
-        <div className="header border-white border-2 border-solid m-2 flex items-center justify-between px-[150px]">
+        <div className="header border-2 border-solid border-white mx-0 mb-2 flex items-center justify-between py-[10px] px-[150px]" style={headerStyleObj}>
             <Logo />
             <Address />
             <NavigationBar />
@@ -85,6 +1950,7 @@ const AppLayout = () => {
     return (
         <div className="app border-white border-2 border-solid">
             <Header />
+            <Body />
         </div>
     )
 };
