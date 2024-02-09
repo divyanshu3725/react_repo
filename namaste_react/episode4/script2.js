@@ -23,6 +23,370 @@ import ReactDOM from "react-dom/client";
 // - legal
 // - we deliver to
 
+// IMAGE GRID CARDS ARRAY
+let imageGridCards = [
+    {
+        "id": "749879",
+        "imageId": "v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Chole_Bature.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80383?collection_id=80383&tags=layout_CCS_CholeBhature&type=rcv2",
+            "text": "Chole Bhature",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for chhole bhatoore",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80383&tags=layout_CCS_CholeBhature",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750203",
+        "imageId": "v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Paratha.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80476?collection_id=80476&tags=layout_BAU_Contextual%2Cparatha%2Cads_pc_paratha&type=rcv2",
+            "text": "Paratha",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for paratha",
+            "altTextCta": "open"
+        },
+        "entityId": "80476",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750132",
+        "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80426?collection_id=80426&tags=layout_CCS_Dosa&type=rcv2",
+            "text": "Dosa",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for dosa",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80426&tags=layout_CCS_Dosa",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750644",
+        "imageId": "v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Idli.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80441?collection_id=80441&searchContext=idli&tags=layout_CCS_Idli&type=rcv2",
+            "text": "Idli",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for idly",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80441&tags=layout_CCS_Idli&searchContext=idli",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750562",
+        "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Vada.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80427?collection_id=80427&tags=layout_BAU_Contextual%2Cvada&type=rcv2",
+            "text": "Vada",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for vada",
+            "altTextCta": "open"
+        },
+        "entityId": "80427",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750544",
+        "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Upma.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80412?collection_id=80412&tags=layout_BAU_Contextual%2Cupma&type=rcv2",
+            "text": "Upma",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for upma",
+            "altTextCta": "open"
+        },
+        "entityId": "80412",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "749761",
+        "imageId": "v1674029851/PC_Creative%20refresh/3D_bau/banners_new/Khichdi.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80456?collection_id=80456&tags=layout_BAU_Contextual%2Ckhichdi&type=rcv2",
+            "text": "Khichdi",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for khicdhi",
+            "altTextCta": "open"
+        },
+        "entityId": "80456",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750592",
+        "imageId": "v1675667625/PC_Creative%20refresh/Biryani_2.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/83649?collection_id=83649&searchQuery=biryani&tags=layout_CCS_Biryani&type=rcv2",
+            "text": "Biryani",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for biryani",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=83649&tags=layout_CCS_Biryani&searchQuery=biryani",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750223",
+        "imageId": "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/83670?collection_id=83670&tags=layout_CCS_Rolls&type=rcv2",
+            "text": "Rolls",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for roll",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=83670&tags=layout_CCS_Rolls",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750207",
+        "imageId": "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pasta.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80480?collection_id=80480&tags=layout_BAU_Contextual%2Cpasta%2Cads_pc_pasta&type=rcv2",
+            "text": "Pasta",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for pasta",
+            "altTextCta": "open"
+        },
+        "entityId": "80480",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "762797",
+        "imageId": "v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/83637?collection_id=83637&tags=layout_CCS_Burger&type=rcv2",
+            "text": "Burgers",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for burger",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=83637&tags=layout_CCS_Burger",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750261",
+        "imageId": "v1674029860/PC_Creative%20refresh/3D_bau/banners_new/Rasmalai.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80391?collection_id=80391&tags=layout_BAU_Contextual%2Crasmalai&type=rcv2",
+            "text": "Rasmalai",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for rasmalai",
+            "altTextCta": "open"
+        },
+        "entityId": "80391",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "749874",
+        "imageId": "v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/83656?collection_id=83656&tags=layout_CCS_Cake&type=rcv2",
+            "text": "Cakes",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for cakes",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=83656&tags=layout_CCS_Cake",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750572",
+        "imageId": "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80439?collection_id=80439&tags=layout_CCS_PureVeg&type=rcv2",
+            "text": "Pure Veg",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for veg",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80439&tags=layout_CCS_PureVeg",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750237",
+        "imageId": "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Poori.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80378?collection_id=80378&tags=layout_BAU_Contextual%2Cpoori&type=rcv2",
+            "text": "Poori",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for poori",
+            "altTextCta": "open"
+        },
+        "entityId": "80378",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750217",
+        "imageId": "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pav_Bhaji.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80364?collection_id=80364&tags=layout_PavBhaji_Contextual&type=rcv2",
+            "text": "Pav Bhaji",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for pav bhaji",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80364&tags=layout_PavBhaji_Contextual",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750078",
+        "imageId": "v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Coffee.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/83660?collection_id=83660&tags=layout_CCS_Coffee&type=rcv2",
+            "text": "Coffee",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for coffee",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=83660&tags=layout_CCS_Coffee",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "749763",
+        "imageId": "v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Lassi.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80459?collection_id=80459&tags=layout_BAU_Contextual%2Classi&type=rcv2",
+            "text": "Lassi",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for lassi",
+            "altTextCta": "open"
+        },
+        "entityId": "80459",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750253",
+        "imageId": "rng/md/carousel/production/cbb85a3c1684891105294d11f8359996",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80407?collection_id=80407&tags=layout_CCS_Tea&type=rcv2",
+            "text": "Tea",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurants curated for tea",
+            "altTextCta": "open"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=80407&tags=layout_CCS_Tea",
+        "frequencyCapping": {
+
+        }
+    },
+    {
+        "id": "750259",
+        "imageId": "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rasgulla.png",
+        "action": {
+            "link": "https://www.swiggy.com/collections/80389?collection_id=80389&tags=layout_BAU_Contextual%2Crasgulla&type=rcv2",
+            "text": "Rasgulla",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "restaurant curated for rasgulla",
+            "altTextCta": "open"
+        },
+        "entityId": "80389",
+        "frequencyCapping": {
+
+        }
+    }
+];
+
 // RESTAURENT ARRAY 1
 let restaurantsArray1 = [
     {
@@ -1674,7 +2038,7 @@ function fullAddress(obj) {
 // SECTION1QUESTION COMPONENT
 const Section1Question = () => {
     return (
-        <div className="section1Question text-[25px] font-bold border-2 border-solid border-white">
+        <div className="section1Question text-[23px] font-bold border-2 border-solid border-white">
             {fullName(user)}, what's on your mind?
         </div>
     )
@@ -1692,10 +2056,10 @@ const Section2Question = () => {
 const Section1Navigation = () => {
     return (
         <div className="section1navigation w-[80px] flex justify-between border-2 mx-[40px] border-solid px-[10px] border-white">
-            <span className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+            <span id="slideLeft1" className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
                 <i className="fa-solid fa-arrow-left" style={{ position: 'relative', top: '5px' }}></i>
             </span>
-            <span className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+            <span id="slideRight1" className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
                 <i className="fa-solid fa-arrow-right" style={{ position: 'relative', top: '5px' }}></i>
             </span>
         </div>
@@ -1706,10 +2070,10 @@ const Section1Navigation = () => {
 const Section2Navigation = () => {
     return (
         <div className="section1navigation w-[80px] flex justify-between border-2 mx-[40px] border-solid px-[10px] border-white">
-            <span className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+            <span id="slideLeft2" className="leftArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
                 <i className="fa-solid fa-arrow-left" style={{ position: 'relative', top: '5px' }}></i>
             </span>
-            <span className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
+            <span id="slideRight2" className="rightArrow bg-slate-300" style={{ color: '#808080', backgroundColor: 'white', textAlign: 'center' }}>
                 <i className="fa-solid fa-arrow-right" style={{ position: 'relative', top: '5px' }}></i>
             </span>
         </div>
@@ -1717,73 +2081,271 @@ const Section2Navigation = () => {
 }
 
 // FOOD IMAGES
-const BiryaniImage = () => {
+const imageCardURLInitialPart = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/';
+const ImageCard0 = () => {
     return (
-        <div className="biryaniImage">
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png" width="144" height="180" alt="restaurants curated for biryani"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[0].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard1 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[1].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard2 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[2].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard3 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[3].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard4 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[4].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard5 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[5].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard6 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[6].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard7 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[7].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard8 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[8].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard9 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[9].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard10 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[10].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard11 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[11].imageId}`} width="148px" height="185px"></img>
         </div>
     )
-}
-const PizzaImage = () => {
+};
+const ImageCard12 = () => {
     return (
-        <div className="biryaniImage">
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png" width="144" height="180" alt="restaurants curated for pizza"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[12].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
-const NorthIndianImage = () => {
+    );
+};
+const ImageCard13 = () => {
     return (
-        <div className="biryaniImage">
-            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/North_Indian_4.png" width="144" height="180" alt="restaurants curated for north indian"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[13].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
-const BurgerImage = () => {
+    );
+};
+const ImageCard14 = () => {
     return (
-        <div className="biryaniImage">
-            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png" width="144" height="180" alt="restaurants curated for burger"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[14].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
-const RollsImage = () => {
+    );
+};
+const ImageCard15 = () => {
     return (
-        <div className="biryaniImage">
-            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[15].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
-const CakesImage = () => {
+    );
+};
+const ImageCard16 = () => {
     return (
-        <div className="biryaniImage">
-            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[16].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
-const ParathaImage = () => {
+    );
+};
+const ImageCard17 = () => {
     return (
-        <div className="biryaniImage">
-            <img class="sc-dcJsrY kMlaev" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Paratha.png" width="144" height="180" alt="restaurants curated for roll"></img>
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[17].imageId}`} width="148px" height="185px"></img>
         </div>
-    )
-}
+    );
+};
+const ImageCard18 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[18].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
+const ImageCard19 = () => {
+    return (
+        <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+            <img className="block box-border" src={`${imageCardURLInitialPart}${imageGridCards[19].imageId}`} width="148px" height="185px"></img>
+        </div>
+    );
+};
 
 // TOP RESTAURANTS IN BILASPUR LIST
-const PizzaHut = () => {
+const topRestaurantImageURLInitialPart = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
+const topRestaurantsSVGdValue = "M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z";
+function showHeaders(obj) {
+    if (obj.info.aggregatedDiscountInfoV3) {
+        return `${obj.info.aggregatedDiscountInfoV3.header} ${obj.info.aggregatedDiscountInfoV3.subHeader}`;
+    }
+    else {
+        return '';
+    };
+};
+function showRating(obj) {
+    if (obj.info.avgRating > 4) {
+        return obj.info.avgRating
+    }
+    else {
+        return `${obj.info.avgRating}.0`
+    };
+};
+// NORMAL PROPS (EVERY ARGUMENT WE PASSES WAS WRAPPED INSIDE THE PROPS OBJECT, SO WE HAD TO USE THEM IN THIS MANNER PROPS.ARGUMENT)
+const TopRestaurantType1 = (props) => {
+    console.log(props);
     return (
-        <div className="pizzaHut relative">
-            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7" alt="Pizza Hut"></img>
+        <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px]">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${props.cloudinaryImageId}`} alt="Pizza Hut"></img>
             <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
-                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">50% OFF UPTO ₹100 </div>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">{props.header} {props.subHeader}</div>
             </div>
             <div className="p-[14px]">
-            <div className="font-bold text-[18px]">Pizza Hut</div>
-            <div>
-                <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z" fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
-                <span className="mr-[5px] font-bold">4.2</span>
-                <span className="mr-[5px] font-bold">20-25mins</span>
+                <div className="font-bold text-[18px]"><span className="overflow-hidden text-ellipsis block">{props.name}</span></div>
+                <div>
+                    <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                    <span className="mr-[8px] font-bold">{props.rating}</span>
+                    <span className="mr-[5px] font-bold">{props.edt}</span>
+                </div>
+                <div><span className="overflow-hidden text-ellipsis block">{props.cuisines}</span></div>
+                <div>{props.areaName}</div>
             </div>
-            <div>Pizzas</div>
-            <div>Tifra</div>
+        </div>
+    )
+};
+// DESTRUCTURED PROPS (EVERY ARGUMENT WE PASSED WAS WRAPPED INSIDE THE PROPS OBJECT, WE HAD TO ACCESS THOSE VALUES LIKE PROPS.ARGUMENT, SO WE DESTRUCTURED THE PROPS OBJECT SO WE DON'T HAVE TO USE THE PROPS KEYWORD AGAIN AND AGAIN)
+const TopRestaurantType2 = (props) => {
+    const {cloudinaryImageId,header,subHeader,name,rating,edt,cuisines,areaName} = {...props}
+    return (
+        <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px]">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${cloudinaryImageId}`} alt="Pizza Hut"></img>
+            <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">{header}{subHeader}</div>
+            </div>
+            <div className="p-[14px]">
+                <div className="font-bold text-[18px]"><span className="overflow-hidden text-ellipsis block">{name}</span></div>
+                <div>
+                    <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                    <span className="mr-[8px] font-bold">{rating}</span>
+                    <span className="mr-[5px] font-bold">{edt}</span>
+                </div>
+                <div><span className="overflow-hidden text-ellipsis block">{cuisines}</span></div>
+                <div>{areaName}</div>
+            </div>
+        </div>
+    )
+};
+// DESTRUCTURING PROPS ON THE FLY
+const TopRestaurantType3 = ({cloudinaryImageId,header,subHeader,name,rating,edt,cuisines,areaName}) => {
+    return (
+        <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px]">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${cloudinaryImageId}`} alt="Pizza Hut"></img>
+            <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">{header}{subHeader}</div>
+            </div>
+            <div className="p-[14px]">
+                <div className="font-bold text-[18px]"><span className="overflow-hidden text-ellipsis block">{name}</span></div>
+                <div>
+                    <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                    <span className="mr-[8px] font-bold">{rating}</span>
+                    <span className="mr-[5px] font-bold">{edt}</span>
+                </div>
+                <div><span className="overflow-hidden text-ellipsis block">{cuisines}</span></div>
+                <div>{areaName}</div>
+            </div>
+        </div>
+    )
+};
+// RECIEVING THE WHOLE RESTAURANT DATA OBJECT AS ARGUMENT
+const TopRestaurantType4 = ({res}) => {
+    return (
+        <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px]">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${res.info.cloudinaryImageId}`} alt="Pizza Hut"></img>
+            <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">{showHeaders(res)}</div>
+            </div>
+            <div className="p-[14px]">
+                <div className="font-bold text-[18px]"><span className="overflow-hidden text-ellipsis block">{res.info.name}</span></div>
+                <div>
+                    <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                    <span className="mr-[8px] font-bold">{res.info.avgRating}</span>
+                    <span className="mr-[5px] font-bold">{res.info.sla.slaString}</span>
+                </div>
+                <div><span className="overflow-hidden text-ellipsis block">{res.info.cuisines.join(', ')}</span></div>
+                <div>{res.info.areaName}</div>
+            </div>
+        </div>
+    )
+};
+// DESTRUCTURING THE WHOSE RESTAURANT OBJECT THAT WE RECIEVED AS AN ARGUMENT
+const TopRestaurantType5 = ({res}) => {
+    const {cloudinaryImageId,name,avgRating,sla,cuisines,areaName} = {...res.info}
+    return (
+        <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px]">
+            <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${cloudinaryImageId}`} alt="Pizza Hut"></img>
+            <div className="w-[273px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[127px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
+                <div className="text-[22px] font-[800] tracking-[-0.5px] text-white px-[12px] py-[6px]">{showHeaders(res)}</div>
+            </div>
+            <div className="p-[14px]">
+                <div className="font-bold text-[18px]"><span className="overflow-hidden text-ellipsis block">{name}</span></div>
+                <div>
+                    <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                    <span className="mr-[8px] font-bold">{avgRating}</span>
+                    <span className="mr-[5px] font-bold">{  sla.slaString}</span>
+                </div>
+                <div><span className="overflow-hidden text-ellipsis block">{cuisines.join(', ')}</span></div>
+                <div>{areaName}</div>
             </div>
         </div>
     )
@@ -1792,42 +2354,103 @@ const PizzaHut = () => {
 // SECTION1IMAGE BOX COMPONENT
 const Section1ImageBox = () => {
     return (
-        <div className="section1ImageBox flex justify-between py-2 border-2 border-solid border-white">
-            <BiryaniImage />
-            <PizzaImage />
-            <NorthIndianImage />
-            <BurgerImage />
-            <RollsImage />
-            <CakesImage />
-            <ParathaImage />
+        <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap">
+            <ImageCard0 />
+            <ImageCard1 />
+            <ImageCard2 />
+            <ImageCard3 />
+            <ImageCard4 />
+            <ImageCard5 />
+            <ImageCard6 />
+            <ImageCard7 />
+            <ImageCard8 />
+            <ImageCard9 />
+            <ImageCard10 />
+            <ImageCard11 />
+            <ImageCard12 />
+            <ImageCard13 />
+            <ImageCard14 />
+            <ImageCard15 />
+            <ImageCard16 />
+            <ImageCard17 />
+            <ImageCard18 />
+            <ImageCard19 />
         </div>
     )
 };
 
+console.log(restaurantsArray1.length)
+
 // SECTION2IMAGE BOX COMPONENT
 const Section2ImageBox = () => {
     return (
-        <div className="section1ImageBox flex justify-between py-2 border-2 border-solid border-white">
-            <PizzaHut />
-            {/* <McDonalds/> */}
-            {/* <NityasZaika/> */}
-            {/* <NeelKanthRestaurant/> */}
-            {/* <KFC/> */}
-            {/* <MadrasiTreat/> */}
-            {/* <OvenStory/> */}
-            {/* <BalleBalle/> */}
-            {/* <CafeYuva/> */}
-            {/* <SanjhaChulha/> */}
-            {/* <MadrasiRestaurant/> */}
-            {/* <BurgerSingh/> */}
-            {/* <Faasos/> */}
-            {/* <TheBiryaniLife/> */}
-            {/* <DumSafarBiryani/> */}
-            {/* <LunchBox/> */}
-            {/* <Dominos/> */}
-            {/* <BaskinRobbins/> */}
-            {/* <SweetTruth/> */}
-            {/* <BehrouzBiryani/> */}
+        <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px]">
+            {/* <TopRestaurantType1 
+                cloudinaryImageId="2b4f62d606d1b2bfba9ba9e5386fabb7"
+                header="50% OFF"
+                subHeader="UPTO $100"
+                name="Pizza Hut"
+                rating="4.2"
+                edt="20-25mins"
+                cuisines="Pizzas"
+                areaName="Tifra"
+            />
+            <TopRestaurantType1 
+                cloudinaryImageId="03501c33ecb3a3105124441e541e6fe4"
+                header="ITEMS"
+                subHeader="AT $199"
+                name="McDonald's"
+                rating="4.4"
+                edt="15-20mins"
+                cuisines="Burgers, Beverages, Cafe, Desserts"
+                areaName="Talapara"
+            /> */}
+            {/* <TopRestaurantType2
+                cloudinaryImageId="2b4f62d606d1b2bfba9ba9e5386fabb7"
+                header="50% OFF"
+                subHeader="UPTO $100"
+                name="Pizza Hut"
+                rating="4.2"
+                edt="20-25mins"
+                cuisines="Pizzas"
+                areaName="Tifra"
+            />
+            <TopRestaurantType2 
+                cloudinaryImageId="03501c33ecb3a3105124441e541e6fe4"
+                header="ITEMS"
+                subHeader="AT $199"
+                name="McDonald's"
+                rating="4.4"
+                edt="15-20mins"
+                cuisines="Burgers, Beverages, Cafe, Desserts"
+                areaName="Talapara"
+            /> */}
+            {/* <TopRestaurantType3
+                cloudinaryImageId="2b4f62d606d1b2bfba9ba9e5386fabb7"
+                header="50% OFF"
+                subHeader="UPTO $100"
+                name="Pizza Hut"
+                rating="4.2"
+                edt="20-25mins"
+                cuisines="Pizzas"
+                areaName="Tifra"
+            />
+            <TopRestaurantType3 
+                cloudinaryImageId="03501c33ecb3a3105124441e541e6fe4"
+                header="ITEMS"
+                subHeader="AT $199"
+                name="McDonald's"
+                rating="4.4"
+                edt="15-20mins"
+                cuisines="Burgers, Beverages, Cafe, Desserts"
+                areaName="Talapara"
+            /> */}
+            {/* <TopRestaurantType4 res={restaurantsArray1[0]} />
+            <TopRestaurantType4 res={restaurantsArray1[1]} /> */}
+            {/* <TopRestaurantType5 res={restaurantsArray1[0]} />
+            <TopRestaurantType5 res={restaurantsArray1[1]} />
+            <TopRestaurantType5 res={restaurantsArray1[2]} /> */}
+            {restaurantsArray1.map(restaurant => <TopRestaurantType5 res={restaurant}/>)}
         </div>
     )
 };
@@ -1959,3 +2582,48 @@ const AppLayout = () => {
 const rootElement = ReactDOM.createRoot(document.getElementById('root'));
 // RENDER THE APPLAYOUT
 rootElement.render(<AppLayout />);
+
+setTimeout(() => {
+
+    let right1 = document.getElementById('slideRight1');
+    right1.onclick = function () {
+        console.log('right slide clicked');
+        let container1 = document.getElementById('section1ImageBox');
+        sideScroll(container1, 'right', 10, 435, 5);
+    };
+
+    let left1 = document.getElementById('slideLeft1');
+    left1.onclick = function () {
+        console.log('left slide clicked');
+        let container1 = document.getElementById('section1ImageBox');
+        sideScroll(container1, 'left', 10, 435, 5);
+    };
+    let right2 = document.getElementById('slideRight2');
+    right2.onclick = function () {
+        console.log('right slide clicked');
+        let container1 = document.getElementById('section2ImageBox');
+        sideScroll(container1, 'right', 30, 540, 50);
+    };
+
+    let left2 = document.getElementById('slideLeft2');
+    left2.onclick = function () {
+        console.log('left slide clicked');
+        let container1 = document.getElementById('section2ImageBox');
+        sideScroll(container1, 'left', 30, 540, 50);
+    };
+
+    function sideScroll(element, direction, speed, distance, step) {
+        scrollAmount = 0;
+        let slideTimer = setInterval(function () {
+            if (direction == 'left') {
+                element.scrollLeft -= step;
+            } else {
+                element.scrollLeft += step;
+            }
+            scrollAmount += step;
+            if (scrollAmount >= distance) {
+                window.clearInterval(slideTimer);
+            }
+        }, speed);
+    }
+}, 1000);
