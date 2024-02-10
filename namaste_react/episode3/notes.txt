@@ -1,0 +1,17 @@
+// PROPS
+// we use props to pass data to components
+// props is short for properties
+// components at the end of the day are normal functions
+// props at the end of the day are normal arguments to the functions
+// props are used to pass dynamic data to components
+
+// CONFIG DRIVEN UI
+// when our user interface is driven by data or configs, we call the UI a config driven UI
+
+// CLOUDINARY IS A CDN
+
+// KEYS
+// help react to distringuish between which element has been updated, which element is new, which element is the same as it was
+// but why react want to know this?
+// so that it re-renders only the new stuff and not the old stuff
+// giving indices as key's values is a bad practice

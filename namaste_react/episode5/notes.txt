@@ -1,0 +1,16 @@
+- all the code is kept inside the src folder
+- makes separate file for every component
+- but at the end of the day parcel will bundle all the js code inside a single .js file 
+- inside the src folder, we will make a components folder
+- inside the components folder we will place our Header component, Body component
+- all these stuff isn't necessary 
+- component file name should be same as the component name
+- component file names should start with a captial letter
+- component file names can either have .js or .jsx
+- we placed the Header component inside Header.jsx file and exported it from there
+- we will import it into App.js
+- first export and then import
+- never keep hardcoded data (like imagecardarray and toprestaurant and url links) in components folder
+- keep them in constants.js or mockdata.js
+- module cannot have multiple default exports
+- if we want a module to do multiple exports then we need to use the named exports
