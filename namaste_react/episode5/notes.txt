@@ -14,3 +14,52 @@
 - keep them in constants.js or mockdata.js
 - module cannot have multiple default exports
 - if we want a module to do multiple exports then we need to use the named exports
+
+DEFAULT EXPORT/IMPORT
+- export default CompName;
+- import CompName from "path";
+
+NAMED EXPORT/IMPORT
+- export const CompName;
+- import {CompName} from "path";
+
+FILE PATHS
+- ./ for current directory
+- ../ for parent directory
+- if we ommit ./ then resource is searched in the current  directory
+
+HOOKS
+- we made a button
+- added click event listener to it
+- on click a function runs
+- the function updates the reslist
+- reslist now contains only the top rated res
+- but our UI doesn't reflect the change
+- because React rendered the reslist earlier, and changes have been made after clicking the button
+- we want React to re-render our rescardcontainer component when it get updated
+- for this we need to use Hooks
+- React keeps our UI in sync with data
+- we need a super powerful react variable
+- a react hook is a normal javasctipt function given to use by react
+- two very important hooks: useState and useEffect
+- we will be using the useState hooks
+- useState hook helps use to make a state variable
+- we need to import the useState hook from react
+- we need to do a named import
+- react has default exported from react
+- but useState hook is named exported from react
+- so we import React like a default import
+- so we import useState as a named import
+- the useState hook can be used inside a component only
+- creating a hook 
+  - let [vari,setVari] = useState(initialValue);
+- we need to use the seVari function whenever we want to update the vari state variable
+- if a state variable is updated, then UI will be updated
+- whenever a state variable updates, react re-renders the component (which is using the state variables)
+- using this useState we can keep our UI in sync with Data
+- 
+
+PROBLEMS
+- we aren't able to change the data which is present inside another module
+- and we shouldn't placed our data in any other module (other than mockData.js)
+- so we export data in the form of an object so that we have the reference to that particular object in the file in which we are importing the file

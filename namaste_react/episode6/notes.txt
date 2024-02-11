@@ -1,0 +1,54 @@
+MONOLITH
+- every team works on the same project/repo
+- we cannot have different techstack for different services
+
+MICROSERVICES
+- different services for different job
+- follows single responsibility principle
+- these services communicate each other using different URLs
+- the project we are making is a UI service
+- we can have different techstack for different services
+
+TWO WAYS
+- load => make API call => render
+- load => render => make API call
+
+WE WILL BE USING SECOND ONE IN REACT
+- this gives us a better UX
+- in the first approach our page will remain frozen until API call is made
+- in the second approach, we render the skeleton which we have, the data which we have, and then we make API call, get the data and then re-render it
+- but second approach will can multiple renders
+- but this doesn't bother use because React's render cycles are superfast
+- React's rendering mechansim is 🔥
+
+WE NEED TO USE THE USEEFFECT HOOK FOR 
+- we need to do a named import from react for getting the useEffect hooks
+- useEffect takes two arguments:
+- first argument: arrow function (callback function)
+- second argument: dependency array
+- this useEffect callback function will be called after our component renders
+- the component which contains the useEffect hook
+- console.log('something') inside the body component will be logged before the callback of the useState function get's called
+
+WHY ARE WE USING THE USESTATE HOOK
+- so as to make an API call after our body component get's rendered
+- we made fetchSwiggyAPIData function (an async function that fetches swaiggy api data)
+- we gave this fetchSwiggyAPIData as a callback to the useState hook
+- but we receive an error
+- saying: access to fetch at "URL" from origin "localhost..." has been blocked by CORS policy
+
+CORS POLICY?
+- our browser's block us from calling an API from one origin to different origin
+- why?
+- how to bypass this CORS?
+- we will use a chrome extension
+
+OPTIONAL CHAINING
+- setlistOfRestaurants(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+  setlistOfDishes(jsonData.data.cards[0].card.card.imageGridCards.info);
+- this is bad 
+- setlistOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+- this is good
+
+stopped at 1:32
