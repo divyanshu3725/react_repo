@@ -51,4 +51,9 @@ OPTIONAL CHAINING
   setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
 - this is good
 
-stopped at 1:32
+WHAT TO SHOW THE USE TILL THE DATA IS FETCHED
+- shimmer UI
+- we did conditional rendering (when the data wasn't loaded we display the shimmer UI, when the data got loaded we replaced the shimmer UI with original data)
+
+CONDITIONAL RENDERING
+- rendering on the basis of condition is called conditional rendering
