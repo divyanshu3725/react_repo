@@ -4,24 +4,29 @@ import { imageCardURLInitialPart, topRestaurantImageURLInitialPart, topRestauran
 import { fullName, fullAddress, showHeaders, showRating } from "./Functionality";
 import { useEffect, useState } from "react";
 
+let fetchedListOfRestaurants;
 // BODY COMPONENT
 const Body = () => {
-
+    // console.log('body comp called');
     // let [listOfRestaurants,setlistOfRestaurants] = useState(restaurantsArray1.data);
     // let [listOfDishes,setlistOfDishes] = useState(imageGridCards);
     let [listOfRestaurants, setlistOfRestaurants] = useState([]);
     let [listOfDishes, setlistOfDishes] = useState([]);
-
+    let [filterValue, setfilterValue] = useState('Top Rated');
+    let [searchText, setsearchText] = useState('');
+    // console.log('fetchedlistofrestaurants is ');
+    // console.log(fetchedListOfRestaurants);
     const fetchSwiggyAPIData = async () => {
         // const apiData = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const apiData = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const jsonData = await apiData.json();
         // setlistOfRestaurants(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         // setlistOfDishes(jsonData.data.cards[0].card.card.imageGridCards.info);
-        setTimeout(() => {
-            setlistOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // setTimeout(() => {
+            fetchedListOfRestaurants = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+            setlistOfRestaurants(fetchedListOfRestaurants);
             setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
-        }, 2000);
+        // }, 2000);
         };
 
     useEffect(() => {
@@ -102,7 +107,7 @@ const Body = () => {
     // IMAGECARDSHIMMER COMPONENT
     const ImageCardShimmer = () => {
             return (
-                <div className="inline-block box-border border-2 border-solid border-white mr-[12px] rounded-[10px]" style={shimmerStyleObj}>
+                <div className="inline-block box-border mr-[12px] rounded-[10px]" style={shimmerStyleObj}>
                     <img className="block box-border" width="148px" height="185px"></img>
                 </div>
             );
@@ -160,9 +165,9 @@ const Body = () => {
                     {/* RATING AND EDT CONTAINING ELEMENT */}
                     <div className=" rounded-[5px] leading-none my-[5px]">
                         {/* RATING ELEMENT */}
-                        <span className="mr-[8px] font-bold bg-white inline-block w-[80px]">&nbsp;</span>
+                        <span className="mr-[8px] rounded-[4px] font-bold bg-white inline-block w-[80px]">&nbsp;</span>
                         {/* EDT ELEMENT */}
-                        <span className="mr-[5px] font-bold bg-white inline-block w-[80px]">&nbsp;</span>
+                        <span className="mr-[5px] rounded-[4px] font-bold bg-white inline-block w-[80px]">&nbsp;</span>
                     </div>
                     {/* CUISINES ELEMENT */}
                     <div><span className="overflow-hidden text-ellipsis block bg-white px-[10px] rounded-[5px] leading-none my-[5px]">&nbsp;</span></div>
@@ -175,11 +180,12 @@ const Body = () => {
 
     // SECTION1IMAGE BOX COMPONENT
     const Section1ImageBox = () => {
+        // console.log("rendering the section1image box")
         let emptyArray10 = ['s','a','m','p','e','a','r','r','a','y'];
-        console.log("length listofdish is ",listOfDishes.length);
+        // console.log("length listofdish is ",listOfDishes.length);
         if(listOfDishes.length==0)
         {
-            console.log("going to return shimmer image cards");
+            // console.log("going to return shimmer image cards");
             return (
                 <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap">
                 {emptyArray10.map(gridCard => <ImageCardShimmer/>)}
@@ -199,11 +205,12 @@ const Body = () => {
 
     // SECTION2IMAGE BOX COMPONENT
     const Section2ImageBox = () => {
+        // console.log("rendering the section2ImageBox");
         let emptyArray10 = ['s','a','m','p','e','a','r','r','a','y'];
-        console.log("length listofdish is ",listOfDishes.length);
+        // console.log(listOfRestaurants);
         if(listOfRestaurants.length==0)
         {
-            console.log("going to return shimmer restaurant cards")
+            // console.log("going to return shimmer restaurant cards")
             return (
                 <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px]">
                 {emptyArray10.map(restaurant => <TopRestaurantCardShimmer/>)}
@@ -233,17 +240,29 @@ const Body = () => {
 
     // FILTER FUNCTION
     const filterRestaurants = () => {
-        const newListOfRestaurants = listOfRestaurants.filter(elem => elem.info.avgRating > 4.2);
-        setlistOfRestaurants(newListOfRestaurants);
+        if(filterValue=='Top Rated')
+        {
+            const newListOfRestaurants = listOfRestaurants.filter(elem => elem.info.avgRating > 4.2);
+            setfilterValue('All');
+            setlistOfRestaurants(newListOfRestaurants);
+            console.log('top click');
+        }
+        else
+        {
+            setfilterValue('Top Rated');
+            setlistOfRestaurants(fetchedListOfRestaurants);
+            console.log('all click');
+        }
     };
 
     // TOPRATED RESATRURANT BUTTON COMPONENT
     const FilterButton = ({ text, func }) => {
+        console.log('filter button comp called');
         return (
             <button onClick={func}
-                className="border-2 border-solid border-black py-[5px] px-[8px] font-extrabold rounded-[5px] m-2"
+                className="border-2 border-solid border-black py-[5px] font-extrabold rounded-[5px] w-[100px] m-2 mx-[20px]"
             >
-                {text}
+                {filterValue}
             </button>
         )
     };
@@ -272,8 +291,8 @@ const Body = () => {
     const Section2 = () => {
         return (
             <div className="section2 border-2 border-white border-solid mx-[200px]">
-                {/* <FilterButton text='Top Rated' func={filterRestaurants} /> */}
                 <Section2Head />
+                <FilterButton text='Top Rated' func={filterRestaurants} />
                 <Section2ImageBox />
             </div>
         )
@@ -289,6 +308,20 @@ const Body = () => {
     return (
         <div className="body">
             <Section1 />
+            <input type="text" className="px-[5px] searchBox border-[1px] border-solid border-black mx-[5px] rounded-[3px]" value={searchText} onChange={(e)=>{
+                    setsearchText(e.target.value)
+                }}></input> 
+                <button className="border-2 border-solid border-black rounded-[3px] px-[3px]" onClick={()=>{
+                    console.log(searchText);
+                    let sampleArray = fetchedListOfRestaurants;
+                    // FILTER BY NAME
+                    // sampleArray = sampleArray.filter((elem) => elem.info.name.indexOf(searchText)!=-1);
+                    // FILTER BY CUISINES
+                    sampleArray = sampleArray.filter((elem) => elem.info.cuisines.join(' ').indexOf(searchText)!=-1);
+                    console.log(sampleArray);
+                    setlistOfRestaurants(sampleArray);
+                    // console.log(listOfRestaurants);
+                }}>Search</button>
             <Section2 />
         </div>
     )

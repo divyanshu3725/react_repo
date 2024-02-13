@@ -57,3 +57,10 @@ WHAT TO SHOW THE USE TILL THE DATA IS FETCHED
 
 CONDITIONAL RENDERING
 - rendering on the basis of condition is called conditional rendering
+
+USESTATE HOOK
+- whenever a state variable updates
+- react re-renders the component which is using the state variable
+- make a log in log out button
+- make in a top rated filter button that toggles too
+- make a search bar
