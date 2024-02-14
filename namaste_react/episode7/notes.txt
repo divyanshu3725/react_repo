@@ -1,0 +1,20 @@
+USEEFFECT HOOK
+- use effect hook is called after every render
+- the use effect hook takes a second arguments , called dependency array
+- the second argument is not mandatory
+- the first argument is mandatory 
+- if we don't give any dependency array, then useEffect hook is called on every render
+- if we give an empty dependency array, then useEffect hook is called only on first render
+- if we give some dependency to the useEffect hook, then it's callback funcion is called whenever that dependency updates
+
+USESTATE HOOK
+- should be made inside components only
+- try to call the hooks on the top
+- never creates state variables (or use useState hooks) inside if else conditionals
+- never create state variables (or use useState hooks) inside for loop
+- never create state variables (or use useState hooks) inside functions
+
+REACT ROUTER DOM
+- first install react-router-dom (npm i react-router-dom)
+
+stopped at 20

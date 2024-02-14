@@ -4,12 +4,12 @@ import { imageCardURLInitialPart, topRestaurantImageURLInitialPart, topRestauran
 import { fullName, fullAddress, showHeaders, showRating } from "./Functionality";
 import { useEffect, useState } from "react";
 
-let fetchedListOfRestaurants;
 // BODY COMPONENT
-const Body = () => {
-    // console.log('body comp called');
+const Body2 = () => {
+    console.log('body comp rerendered');
     // let [listOfRestaurants,setlistOfRestaurants] = useState(restaurantsArray1.data);
     // let [listOfDishes,setlistOfDishes] = useState(imageGridCards);
+    let [fetchedListOfRestaurants, setfetchedListOfRestaurants] = useState([]);
     let [listOfRestaurants, setlistOfRestaurants] = useState([]);
     let [listOfDishes, setlistOfDishes] = useState([]);
     let [filterValue, setfilterValue] = useState('Top Rated');
@@ -17,21 +17,35 @@ const Body = () => {
     // console.log('fetchedlistofrestaurants is ');
     // console.log(fetchedListOfRestaurants);
     const fetchSwiggyAPIData = async () => {
-        // const apiData = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const apiData = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        // const apiData = await fetch('https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const jsonData = await apiData.json();
         // setlistOfRestaurants(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         // setlistOfDishes(jsonData.data.cards[0].card.card.imageGridCards.info);
         // setTimeout(() => {
-            fetchedListOfRestaurants = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-            setlistOfRestaurants(fetchedListOfRestaurants);
-            setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+        setfetchedListOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setlistOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
         // }, 2000);
-        };
+    };
 
+    // IF USE EFFECT ISN'T GIVEN ANY DEPENDENCY ARRAY
+    // useEffect(() => {
+    //     console.log("useEffect hook callback called");
+    //     fetchSwiggyAPIData();
+    // });
+
+    // IF USE EFFECT IS GIVEN AN EMPTY DEPENDENCY ARRAY
+    // useEffect(() => {
+    //     console.log("useEffect hook callback called");
+    //     fetchSwiggyAPIData();
+    // },[]);
+    
+    // IF USE EFFECT IS GIVEN SOME DEPENDENCY
     useEffect(() => {
-        fetchSwiggyAPIData()
-    }, []);
+        console.log("useEffect hook callback called");
+        fetchSwiggyAPIData();
+    },[filterValue]);
 
 
     // SECTION1QUESTION COMPONENT
@@ -82,11 +96,11 @@ const Body = () => {
 
     // IMAGECARD COMPONENT
     const ImageCard = ({ cardObj }) => {
-            return (
-                <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
-                    <img className="block box-border" src={`${imageCardURLInitialPart}${cardObj.imageId}`} width="148px" height="185px"></img>
-                </div>
-            );
+        return (
+            <div className="inline-block box-border border-2 border-solid border-white mr-[12px]">
+                <img className="block box-border" src={`${imageCardURLInitialPart}${cardObj.imageId}`} width="148px" height="185px"></img>
+            </div>
+        );
     };
 
     // TOPRESTAURANT SHIMMER COMPONENTS STYLE OBJECT
@@ -94,23 +108,23 @@ const Body = () => {
         "background": "rgb(220 220 220)",
         "background-image": "linear-gradient(to right, rgb(231 229 228) 0%, rgb(214 211 209) 20%, rgb(231 229 228) 40%, rgb(231 229 228) 100%)",
         "background-repeat": "no-repeat",
-        "background-size": "310px", 
+        "background-size": "310px",
         "display": "inline-block",
-        "position": "relative", 
+        "position": "relative",
         "-webkit-animation-duration": "1.5s",
-        "-webkit-animation-fill-mode": "forwards", 
+        "-webkit-animation-fill-mode": "forwards",
         "-webkit-animation-iteration-count": "infinite",
         "-webkit-animation-name": "placeholderShimmer",
         "-webkit-animation-timing-function": "linear",
-        }
+    }
 
     // IMAGECARDSHIMMER COMPONENT
     const ImageCardShimmer = () => {
-            return (
-                <div className="inline-block box-border mr-[12px] rounded-[10px]" style={shimmerStyleObj}>
-                    <img className="block box-border" width="148px" height="185px"></img>
-                </div>
-            );
+        return (
+            <div className="inline-block box-border mr-[12px] rounded-[10px]" style={shimmerStyleObj}>
+                <img className="block box-border" width="148px" height="185px"></img>
+            </div>
+        );
     };
 
     // DESTRUCTURING THE WHOLE RESTAURANT OBJECT THAT WE RECIEVED AS AN ARGUMENTS
@@ -181,57 +195,53 @@ const Body = () => {
     // SECTION1IMAGE BOX COMPONENT
     const Section1ImageBox = () => {
         // console.log("rendering the section1image box")
-        let emptyArray10 = ['s','a','m','p','e','a','r','r','a','y'];
+        let emptyArray10 = ['s', 'a', 'm', 'p', 'e', 'a', 'r', 'r', 'a', 'y'];
         // console.log("length listofdish is ",listOfDishes.length);
-        if(listOfDishes.length==0)
-        {
+        if (listOfDishes.length == 0) {
             // console.log("going to return shimmer image cards");
             return (
-                <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap">
-                {emptyArray10.map(gridCard => <ImageCardShimmer/>)}
-            </div>
-        )
+                <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap mx-[200px] mb-[70px]">
+                    {emptyArray10.map(gridCard => <ImageCardShimmer />)}
+                </div>
+            )
         }
-        else
-        {
+        else {
 
             return (
-                <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap">
-                {listOfDishes.map(gridCard => <ImageCard cardObj={gridCard} />)}
-            </div>
-        )
-    };
+                <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap mx-[200px] mb-[70px]">
+                    {listOfDishes.map(gridCard => <ImageCard cardObj={gridCard} />)}
+                </div>
+            )
+        };
     };
 
     // SECTION2IMAGE BOX COMPONENT
     const Section2ImageBox = () => {
         // console.log("rendering the section2ImageBox");
-        let emptyArray10 = ['s','a','m','p','e','a','r','r','a','y'];
+        let emptyArray10 = ['s', 'a', 'm', 'p', 'e', 'a', 'r', 'r', 'a', 'y'];
         // console.log(listOfRestaurants);
-        if(listOfRestaurants.length==0)
-        {
+        if (listOfRestaurants.length == 0) {
             // console.log("going to return shimmer restaurant cards")
             return (
-                <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px]">
-                {emptyArray10.map(restaurant => <TopRestaurantCardShimmer/>)}
-            </div>
-        )
+                <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px] mx-[200px]">
+                    {emptyArray10.map(restaurant => <TopRestaurantCardShimmer />)}
+                </div>
+            )
         }
-        else
-        {
+        else {
             return (
-                <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px]">
-                {/* {restaurantsArray1.data.map(restaurant => <TopRestaurant res={restaurant} />)} */}
-                {listOfRestaurants.map(restaurant => <TopRestaurantCard res={restaurant} />)}
-            </div>
-        )
-    };
+                <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px] mx-[200px]">
+                    {/* {restaurantsArray1.data.map(restaurant => <TopRestaurant res={restaurant} />)} */}
+                    {listOfRestaurants.map(restaurant => <TopRestaurantCard res={restaurant} />)}
+                </div>
+            )
+        };
     };
 
     // SECTION1HEAD COMPONENT
     const Section1Head = () => {
         return (
-            <div className="section1head flex justify-between">
+            <div className="section1head flex justify-between mx-[200px]">
                 <Section1Question />
                 <Section1Navigation />
             </div>
@@ -240,27 +250,23 @@ const Body = () => {
 
     // FILTER FUNCTION
     const filterRestaurants = () => {
-        if(filterValue=='Top Rated')
-        {
-            const newListOfRestaurants = listOfRestaurants.filter(elem => elem.info.avgRating > 4.2);
+        if (filterValue == 'Top Rated') {
+            const newListOfRestaurants = fetchedListOfRestaurants.filter(elem => elem.info.avgRating > 4.2);
             setfilterValue('All');
             setlistOfRestaurants(newListOfRestaurants);
-            console.log('top click');
         }
-        else
-        {
+        else {
             setfilterValue('Top Rated');
             setlistOfRestaurants(fetchedListOfRestaurants);
-            console.log('all click');
         }
     };
 
     // TOPRATED RESATRURANT BUTTON COMPONENT
-    const FilterButton = ({ text, func }) => {
-        console.log('filter button comp called');
+    const FilterButton = ({ func }) => {
+        // console.log('filter button comp called');
         return (
             <button onClick={func}
-                className="border-2 border-solid border-black py-[5px] font-extrabold rounded-[5px] w-[100px] m-2 mx-[20px]"
+                className="border-2 border-solid border-black font-bold rounded-[5px] w-[90px]"
             >
                 {filterValue}
             </button>
@@ -270,59 +276,59 @@ const Body = () => {
     // SECTION2HEAD COMPONENT
     const Section2Head = () => {
         return (
-            <div className="section1head flex justify-between">
+            <div className="section1head flex justify-between mx-[200px]">
                 <Section2Question />
                 <Section2Navigation />
             </div>
         )
     }
 
-    // SECTION1 COMPONENT
-    const Section1 = () => {
+    // SEARCH BAR COMPONENT
+    const SearchBox = () => {
         return (
-            <div className="section1 border-2 border-white border-solid mx-[200px] pb-[30px] mb-[40px]">
-                <Section1Head />
-                <Section1ImageBox />
-            </div>
-        )
-    }
-
-    // SECTION2 COMPONENT
-    const Section2 = () => {
-        return (
-            <div className="section2 border-2 border-white border-solid mx-[200px]">
-                <Section2Head />
-                <FilterButton text='Top Rated' func={filterRestaurants} />
-                <Section2ImageBox />
-            </div>
-        )
-    }
-
-    // if (listOfDishes.length == 0 || listOfRestaurants.length == 0) {
-    //     return (
-    //         <div>Loading...</div>
-    //     )
-    // }
-
-    // RETURNING 
-    return (
-        <div className="body">
-            <Section1 />
-            <input type="text" className="px-[5px] searchBox border-[1px] border-solid border-black mx-[5px] rounded-[3px]" value={searchText} onChange={(e)=>{
-                    setsearchText(e.target.value)
-                }}></input> 
-                <button className="border-2 border-solid border-black rounded-[3px] px-[3px]" onClick={()=>{
-                    console.log(searchText);
+            <div>
+                <button className="border-2 border-solid border-black font-bold rounded-[3px] px-[3px]" onClick={() => {
                     let sampleArray = fetchedListOfRestaurants;
                     // FILTER BY NAME
-                    // sampleArray = sampleArray.filter((elem) => elem.info.name.indexOf(searchText)!=-1);
+                    sampleArray = sampleArray.filter((elem) => (
+                        (elem.info.name.toLowerCase().indexOf(searchText.toLowerCase()) != -1) 
+                        ||
+                        (elem.info.cuisines.join(' ').toLowerCase().indexOf(searchText.toLowerCase()) != -1) 
+                        ));
                     // FILTER BY CUISINES
-                    sampleArray = sampleArray.filter((elem) => elem.info.cuisines.join(' ').indexOf(searchText)!=-1);
+                    // sampleArray = sampleArray.filter((elem) => elem.info.cuisines.join(' ').indexOf(searchText) != -1);
+                    // console.log(sampleArray);
                     console.log(sampleArray);
                     setlistOfRestaurants(sampleArray);
                     // console.log(listOfRestaurants);
                 }}>Search</button>
-            <Section2 />
+            </div>
+        )
+    };
+
+    // RETURNING 
+    return (
+        <div className="body">
+            {/* <Section1 /> */}
+            {/* <Section2 /> */}
+            <Section1Head />
+            <Section1ImageBox />
+            <Section2Head />
+            <div className="mx-[200px] flex justify-between border-2 border-solid border-white">
+                <div className="border-2 border-solid border-white flex">
+                    <input type="text"
+                           className="px-[5px] searchBox border-[1px] border-solid border-black mx-[5px] rounded-[3px]"
+                           value={searchText}
+                           onChange={
+                                (e) => {setsearchText(e.target.value)
+                           }}
+                           >
+                    </input>
+                    <SearchBox />
+                </div>
+                <FilterButton func={filterRestaurants} />
+            </div>
+            <Section2ImageBox />
         </div>
     )
 };
@@ -372,4 +378,4 @@ const Body = () => {
 //     }
 // }, 1000);
 
-export default Body;
+export default Body2;

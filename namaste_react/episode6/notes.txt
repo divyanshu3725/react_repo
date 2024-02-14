@@ -17,7 +17,7 @@ WE WILL BE USING SECOND ONE IN REACT
 - this gives us a better UX
 - in the first approach our page will remain frozen until API call is made
 - in the second approach, we render the skeleton which we have, the data which we have, and then we make API call, get the data and then re-render it
-- but second approach will can multiple renders
+- but second approach will cause multiple renders
 - but this doesn't bother use because React's render cycles are superfast
 - React's rendering mechansim is 🔥
 
@@ -32,7 +32,7 @@ WE NEED TO USE THE USEEFFECT HOOK FOR
 
 WHY ARE WE USING THE USESTATE HOOK
 - so as to make an API call after our body component get's rendered
-- we made fetchSwiggyAPIData function (an async function that fetches swaiggy api data)
+- we made fetchSwiggyAPIData function (an async function that fetches swiggy api data)
 - we gave this fetchSwiggyAPIData as a callback to the useState hook
 - but we receive an error
 - saying: access to fetch at "URL" from origin "localhost..." has been blocked by CORS policy
@@ -59,8 +59,18 @@ CONDITIONAL RENDERING
 - rendering on the basis of condition is called conditional rendering
 
 USESTATE HOOK
-- whenever a state variable updates
-- react re-renders the component which is using the state variable
+- whenever a state variable updates eact re-renders the component which is using the state variable
 - make a log in log out button
 - make in a top rated filter button that toggles too
 - make a search bar
+
+SEARCH BAR WORKING
+- we didn't keep our search bar inside any component why? because doing so will make React to render that particular component when we type something in, this will remove the focus from the input element
+- we kept the input element so that on changing or on typing inside the input element, the state variable changes, but none of th components get's rerendered
+- when we click the search button, then we filter an array of restaurants from the fetchedListOfRestarurants (which remains intact)
+- then we assign the this array to the listOfRestaurants
+- list of restaurants is showed on the screen, so the component get's re-rendered
+- on clicking the top rated, we filter from the fetched list of restaurants, on clicking the all restaurants we fetch the fetchedListOfRestarurants
+
+CORS PLUGIN ISSUE
+- 
