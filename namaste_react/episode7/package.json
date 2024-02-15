@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index7.html",
     "test": "jest"
   },
   "author": "chinu",

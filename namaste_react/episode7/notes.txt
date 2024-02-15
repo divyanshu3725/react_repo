@@ -16,5 +16,59 @@ USESTATE HOOK
 
 REACT ROUTER DOM
 - first install react-router-dom (npm i react-router-dom)
+- we have to create routing configuration in our App.js
+- for this we need to import the createBrowserRouter from the react=router-dom
+  import { createBrowserRouter } from "react-router-dom";
 
-stopped at 20
+CREATING A CONFIGURATION FOR ROUTING 
+- first import the createBrowserRouter function
+- then we will supply in the configuration that it needs
+- inside the configuration we specify which component to display at which route
+
+- now we need to import the RouterProvider
+
+ROUTERPROVIDER
+- a RouterProvider provides a router configuration to our app
+- earlier we were rendering th AppLayout component directly
+- now after we have imported the RouterProvider, we won't be render a single component, we will be rendering a whole RouterProvider
+
+RENDERING A ROUTERCONFIGURATION
+- rootElement.render(<RouterProvider router={appRouter} />)
+
+MANY TYPES OF ROUTERS
+- the react-router-dom library / package provides many types of routers
+
+WHAT IF A ROUTER IS NOT FOUND
+- if a route is not found, then react-router-dom sends us a beautify error message, it handles the error for us and shows us a nice error message
+
+CREATING A FANCY ERROR
+- we can also add a errorElement to a particular path inside the configuration
+- we can also get the information about the error, using the useRouterError hook from the react-router-dom
+- just store the value of that the useRouterError function returns and use them as you want
+
+KEEPING THE HEADER INTACT (CREATING CHILD ROUTES)
+- int the routerconfiguration give a new key to the main route named children
+- to this we will give an array of routes
+- errorElement attribute will be preseent at the end 
+
+CHANGING ROUTE ON CLICK OF BUTTON
+- can be achieved using the <a> element 
+- but this is a bad idea 
+- why? because this will cause a full page refresh/reload
+- we don't want to refresh our whole page
+- but at the same time we want to move to a new route
+- we will be using link for it
+
+LINK 
+- import it from the react-router-dom
+- works exactly as the <a> tag
+- only difference is that the a tag takes the href attribute but the Link tag takes the to attribute
+
+SINGLE PAGE APPLICATIONS
+- and using the link we have created single page applications
+- now our application is a single page, is a single component, 
+- as we navigate to different routes, just components are getting changed 
+
+TWO TYPES OF ROUTING
+- client side routing: we are using this, all the components are already loaded into our app, 
+- server side routing: we are on index.html, we click on about us button, network call is made, we get the about.html from the server, then it's rendered (causes a full page reload)
