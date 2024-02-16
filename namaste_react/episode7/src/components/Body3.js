@@ -156,7 +156,7 @@ const Body2 = () => {
                     setlistOfRestaurants(sampleArray);
                 }}>Search</button>
             )
-        };
+        }; 
         const ClearBox = () => {
             // console.log("clearbox rendered");
             return (
