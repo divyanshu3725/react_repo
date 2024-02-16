@@ -3,6 +3,7 @@ import { imageGridCards, restaurantsArray1 } from "../utils/MockData"
 import { imageCardURLInitialPart, topRestaurantImageURLInitialPart, topRestaurantsSVGdValue } from "../utils/Constants";
 import { fullName, fullAddress, showHeaders, showRating } from "./Functionality";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // BODY COMPONENT
 const Body2 = () => {
@@ -20,9 +21,16 @@ const Body2 = () => {
         const apiData = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         // const apiData = await fetch('https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.0796545&lng=82.1409152&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const jsonData = await apiData.json();
+        // jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((res) => {
+        //     console.log(res.cta.link.toString().slice(35));
+        // })
         // setlistOfRestaurants(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         // setlistOfDishes(jsonData.data.cards[0].card.card.imageGridCards.info);
         // setTimeout(() => {
+        console.log('restarurants: ');
+        console.log(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log('dishes: ');
+        console.log(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
         setfetchedListOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setlistOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setlistOfDishes(jsonData?.data?.cards[0]?.card?.card?.imageGridCards?.info);
@@ -43,9 +51,9 @@ const Body2 = () => {
     
     // IF USE EFFECT IS GIVEN SOME DEPENDENCY
     useEffect(() => {
-        console.log("useEffect hook callback called");
+        // console.log("useEffect hook callback called");
         fetchSwiggyAPIData();
-    },[filterValue]);
+    },[]);
 
 
     // SECTION1QUESTION COMPONENT
@@ -106,16 +114,16 @@ const Body2 = () => {
     // TOPRESTAURANT SHIMMER COMPONENTS STYLE OBJECT
     const shimmerStyleObj = {
         "background": "rgb(220 220 220)",
-        "background-image": "linear-gradient(to right, rgb(231 229 228) 0%, rgb(214 211 209) 20%, rgb(231 229 228) 40%, rgb(231 229 228) 100%)",
-        "background-repeat": "no-repeat",
-        "background-size": "310px",
+        "backgroundImage": "linear-gradient(to right, rgb(231 229 228) 0%, rgb(214 211 209) 20%, rgb(231 229 228) 40%, rgb(231 229 228) 100%)",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "310px",
         "display": "inline-block",
         "position": "relative",
-        "-webkit-animation-duration": "1.5s",
-        "-webkit-animation-fill-mode": "forwards",
-        "-webkit-animation-iteration-count": "infinite",
-        "-webkit-animation-name": "placeholderShimmer",
-        "-webkit-animation-timing-function": "linear",
+        "WebkitAnimationDuration": "1.5s",
+        "WebkitAnimationFillMode": "forwards",
+        "WebkitAnimationIterationCount": "infinite",
+        "WebkitAnimationName": "placeholderShimmer",
+        "WebkitAnimationTimingFunction": "linear",
     }
 
     // IMAGECARDSHIMMER COMPONENT
@@ -130,10 +138,11 @@ const Body2 = () => {
     // DESTRUCTURING THE WHOLE RESTAURANT OBJECT THAT WE RECIEVED AS AN ARGUMENTS
     const TopRestaurantCard = ({ res }) => {
         const { cloudinaryImageId, name, avgRating, sla, cuisines, areaName } = { ...res.info }
+        const { link } = { ...res.cta }
         return (
             <div className="pizzaHut inline-block box-border inline-block relative border-2 border-solid border-white mr-[20px] w-[273px] h-[310px]">
                 {/* IMAGE ELEMENT */}
-                <img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${cloudinaryImageId}`} alt="Pizza Hut"></img>
+                <Link to={`/restaurants/${link.toString().slice(35)}`}><img className="relative" style={{ width: '273px', height: '182px', cursor: 'pointer', objectFit: 'cover', borderRadius: '20px' }} src={`${topRestaurantImageURLInitialPart}${cloudinaryImageId}`} alt="Pizza Hut"></img></Link>
                 {/* HEADER DARD BACKGROUND ELEMENT  */}
                 <div className="w-[271px] rounded-[20px] color h-[73px] flex items-end absolute bottom-[124px]" style={{ backgroundImage: 'linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)' }}>
                     {/* HEADER ELEMENT */}
@@ -146,7 +155,7 @@ const Body2 = () => {
                     {/* RATING AND EDT CONTAINING ELEMENT */}
                     <div className="leading-tight my-[2px]">
                         {/* RATING ICON ELEMENT */}
-                        <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="#1eb346"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
+                        <svg className="inline-block mr-[5px]" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#1eb346"></circle><path d={topRestaurantsSVGdValue} fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stopColor="#21973B"></stop><stop offset="1" stopColor="#128540"></stop></linearGradient></defs></svg>
                         {/* RATING ELEMENT */}
                         <span className="mr-[8px] font-semibold opacity-90">{showRating(avgRating)}</span>
                         {/* EDT ELEMENT */}
@@ -195,13 +204,13 @@ const Body2 = () => {
     // SECTION1IMAGE BOX COMPONENT
     const Section1ImageBox = () => {
         // console.log("rendering the section1image box")
-        let emptyArray10 = ['s', 'a', 'm', 'p', 'e', 'a', 'r', 'r', 'a', 'y'];
+        let emptyArray10 = [0,1,2,3,4,5,6,7,8,9,10];
         // console.log("length listofdish is ",listOfDishes.length);
         if (listOfDishes.length == 0) {
             // console.log("going to return shimmer image cards");
             return (
                 <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap mx-[200px] mb-[70px]">
-                    {emptyArray10.map(gridCard => <ImageCardShimmer />)}
+                    {emptyArray10.map(gridCard => <ImageCardShimmer key={gridCard} />)}
                 </div>
             )
         }
@@ -209,7 +218,7 @@ const Body2 = () => {
 
             return (
                 <div id="section1ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap mx-[200px] mb-[70px]">
-                    {listOfDishes.map(gridCard => <ImageCard cardObj={gridCard} />)}
+                    {listOfDishes.map(gridCard => <ImageCard key={gridCard.id} cardObj={gridCard} />)}
                 </div>
             )
         };
@@ -218,13 +227,13 @@ const Body2 = () => {
     // SECTION2IMAGE BOX COMPONENT
     const Section2ImageBox = () => {
         // console.log("rendering the section2ImageBox");
-        let emptyArray10 = ['s', 'a', 'm', 'p', 'e', 'a', 'r', 'r', 'a', 'y'];
+        let emptyArray10 = [0,1,2,3,4,5,6,7,8,9,10];
         // console.log(listOfRestaurants);
         if (listOfRestaurants.length == 0) {
             // console.log("going to return shimmer restaurant cards")
             return (
                 <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px] mx-[200px]">
-                    {emptyArray10.map(restaurant => <TopRestaurantCardShimmer />)}
+                    {emptyArray10.map(restaurant => <TopRestaurantCardShimmer key={restaurant} />)}
                 </div>
             )
         }
@@ -232,7 +241,7 @@ const Body2 = () => {
             return (
                 <div id="section2ImageBox" className="py-2 border-2 border-solid border-white overflow-auto whitespace-nowrap h-[380px] mx-[200px]">
                     {/* {restaurantsArray1.data.map(restaurant => <TopRestaurant res={restaurant} />)} */}
-                    {listOfRestaurants.map(restaurant => <TopRestaurantCard res={restaurant} />)}
+                    {listOfRestaurants.map(restaurant => <TopRestaurantCard key={restaurant.info.id} res={restaurant} />)}
                 </div>
             )
         };
@@ -253,11 +262,15 @@ const Body2 = () => {
         if (filterValue == 'Top Rated') {
             const newListOfRestaurants = fetchedListOfRestaurants.filter(elem => elem.info.avgRating > 4.2);
             setfilterValue('All');
+            console.log('top rated click');
             setlistOfRestaurants(newListOfRestaurants);
+            setsearchText('');
         }
         else {
+            console.log('all click');
             setfilterValue('Top Rated');
             setlistOfRestaurants(fetchedListOfRestaurants);
+            setsearchText('');
         }
     };
 
@@ -298,7 +311,7 @@ const Body2 = () => {
                     // FILTER BY CUISINES
                     // sampleArray = sampleArray.filter((elem) => elem.info.cuisines.join(' ').indexOf(searchText) != -1);
                     // console.log(sampleArray);
-                    console.log(sampleArray);
+                    // console.log(sampleArray);
                     setlistOfRestaurants(sampleArray);
                     // console.log(listOfRestaurants);
                 }}>Search</button>

@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 // import Body1 from "./components/Body1.js";
-import Body2 from "./components/Body2.js";
+// import Body2 from "./components/Body2.js";
+import Body3 from "./components/Body3.js";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import ErrorComp from "./components/ErrorComp.js";
+import ResMenu from "./components/ResMenu.js";
 
 // MAIN COMPONENT (APPLAYOUT)
 const AppLayout = () => {
@@ -27,7 +29,7 @@ const appRouter = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Body2 />,
+                element: <Body3 />,
             },
             {
                 path: "/about",
@@ -36,6 +38,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/restaurants/:resId",
+                element: <ResMenu />,
             }
         ],
         errorElement: <ErrorComp />
